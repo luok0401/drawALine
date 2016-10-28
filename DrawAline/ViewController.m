@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "DrawView.h"
 
 @interface ViewController ()
 
@@ -17,6 +18,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    //初始化drawView，Frame大小为主视图的大小
+    DrawView *drawView = [[DrawView alloc]initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height)];
+    //将DrawView添加到主视图
+    [self.view addSubview:drawView];
 }
 
 
